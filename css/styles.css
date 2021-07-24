@@ -2,3 +2,130 @@
    width: 200px;
    height: auto;
 }
+body {
+   margin: 0;
+}
+
+.pageTitle {
+   float: left;
+   padding: 10px 20px;
+   align-content: center;
+}
+
+.header {
+   height: 40px;
+   background-color: #56ccf2;
+   text-transform: uppercase;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+}
+
+.navigation {
+   display: flex;
+   justify-content: flex-end;
+   margin: 0px;
+}
+
+.navitem {
+   padding: 10px 20px;
+}
+
+.title {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 24px;
+}
+
+.recipeContainer {
+   margin: 24px;
+}
+
+.recipe {
+   display: flex;
+   width: 48%;
+   border: 1px solid lightgray;
+   margin: 0 15px 15px 0;
+   justify-content: flex-start;
+}
+
+.recipeBox {
+   display: flex;
+   justify-content: flex-start;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.recipeContent {
+   margin:24px;
+   max-width: 300px;
+}
+
+.recipeImage {
+   width: 200px;
+   height: auto;
+}
+
+button {
+   background-color: #F2C94C;
+   width:100%;
+   font-size: 14px;
+   text-transform: uppercase;
+   border-radius: 8px;
+   border: 0;
+   height: 30px;
+   margin-top: 24px;
+}
+
+button a{
+   color: black;
+   text-decoration: none;
+   padding: 0 8px;
+   letter-spacing: 1px;
+}
+
+.footer {
+   background-color: #ddf5fc;
+   padding: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   color: black;
+   letter-spacing: 1px;
+   text-align: center;
+}
+
+.footer a {
+   color: black;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+/* What I expect this media query to do - Change the rows to one column at the breakpoint where the image starts getting disproportionately distorted.  */
+@media only screen and (max-width: 1155px) {
+
+   .recipeBox {
+      flex-direction: column;
+      max-width: none;
+      width: 100%;
+   }
+   .recipe {
+      border: 1px solid lightgray;
+      margin: 0 15px 15px 0;
+      width: 100%;
+
+   }
+   .recipeContent {
+      margin:24px;
+      max-width: none;
+      width: 100%;
+
+   }
+   button {
+      max-width: 200px;
+   }
+}
+/* This media query will make recipes stack if the window is smaller */
+@media only screen and (max-width: 1000px) {
+   .recipeBox {
+     flex-direction: column;
+   }
+ }
